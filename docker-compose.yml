@@ -1,0 +1,13 @@
+version: '2'
+services:
+  web:
+    image: vanryn/bepasty.v2
+    container_name: bepasty
+    volumes:
+      - /home/vanryn/Dockers/nginx/bepasty:/srv/bepasty
+      - /home/vanryn/Dockers/nginx/bepasty/storage:/srv/bepasty/storage
+      - /home/vanryn/Dockers/nginx/bepasty/logs:/srv/bepasty/logs
+    ports:
+      - 5000:5000
+    restart: unless-stopped
+
