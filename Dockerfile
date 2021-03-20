@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-LABEL Patrick Van Ryn
+LABEL maintainer= Patrick Van Ryn
 
 RUN apt-get update -y && apt-get install --no-install-recommends -y python3-dev python3-pip python3-venv python3-setuptools build-essential && \ 
 pip3 install bepasty uwsgi && \
