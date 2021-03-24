@@ -1,13 +1,13 @@
 version: '2'
 services:
   web:
-    image: vanryn/bepasty
+    image: pvanryn/bepasty
     container_name: bepasty
     volumes:
       - /path/to/bepasty:/srv/bepasty  # bepasty.conf gets stored here
       - /path/to/storage:/srv/bepasty/storage
       - /path/to/logs:/srv/bepasty/logs
     ports:
-      - 5000:5000
+      - 5001:5000
     restart: unless-stopped
 
