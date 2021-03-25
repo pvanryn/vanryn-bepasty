@@ -1,6 +1,5 @@
 FROM debian:stable-slim
-LABEL maintainer=vanryn@noah.tel
-
+LABEL maintainer="Patrick Van Ryn <vanryn@noah.tel>"
 RUN apt-get update -y && apt-get install --no-install-recommends -y python3-dev python3-pip python3-setuptools build-essential && \ 
 pip3 install bepasty uwsgi && \
 rm -rf /var/lib/apt/lists/* && \
